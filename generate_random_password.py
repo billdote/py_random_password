@@ -45,6 +45,7 @@ def create_password_file(password):
         csv_writer = writer(write_obj)
 
         if os.stat('passwords.csv').st_size == 0:
+            os.chmod('passwords.csv', 0o600)
             csv_writer.writerow(col_names)
         csv_writer.writerow(data)
 
