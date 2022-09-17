@@ -41,7 +41,7 @@ def create_password_file(password):
 
     data = [username, password, description]
 
-    # create a pipe delimited password text file or append to it
+    # create a password csv file or append to it
     with open('passwords.csv', 'a+', newline='') as write_obj:
         csv_writer = writer(write_obj)
 
