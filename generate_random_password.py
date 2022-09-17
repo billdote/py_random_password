@@ -17,7 +17,7 @@ def generate_random_password():
         password.append(random.choice(characters))
 
     random.shuffle(password)
-    print(f"Generated Password: {''.join(password)}")
+    print(f"\nGenerated Password: {''.join(password)}")
 
 try:
     generate_random_password()
