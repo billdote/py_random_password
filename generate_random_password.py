@@ -41,6 +41,7 @@ def create_password_file(password):
     data = [username, password, description]
 
     # create a password csv file or append to it
+    # file will have a permissions mode of 600
     with open('passwords.csv', 'a+', newline='') as write_obj:
         csv_writer = writer(write_obj)
 
