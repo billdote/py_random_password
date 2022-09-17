@@ -3,9 +3,9 @@ import random
 import sys
 
 def generate_random_password():
-    length = int(input('Enter desired length of password: '))
+    length = int(input('Enter password length: '))
     
-    exclude_schar = input('Enter any special characters to exclude (!@#$()%^&*): ')
+    exclude_schar = input('Enter special characters to exclude (!@#$()%^&*): ')
     schar = '!@#$%^&*()'.replace(exclude_schar, '') if exclude_schar else '!@#$%^&*()'
 
     characters = list(string.ascii_letters + string.digits + schar)
