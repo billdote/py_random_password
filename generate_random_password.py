@@ -22,4 +22,5 @@ def generate_random_password():
 try:
     generate_random_password()
 except:
+    print('Exiting...')
     sys.exit(1)
