@@ -13,10 +13,9 @@ def generate_random_password():
     schar = '!@#$%^&*()'.replace(exclude_schar, '') if exclude_schar else '!@#$%^&*()'
 
     characters = list(string.ascii_letters + string.digits + schar)
-
     random.shuffle(characters)
-    password = []
 
+    password = []
     for i in range(length):
         password.append(random.choice(characters))
 
@@ -24,7 +23,7 @@ def generate_random_password():
     password = ''.join(password)
 
     create_file = input(
-        'Do you want to create or add to a password file? (Y/N) ')
+        'Do you want to create or append to a password file? (Y/N) ')
 
     if re.match('^Y|y$', create_file):
         create_password_file(password)
