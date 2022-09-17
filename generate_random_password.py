@@ -1,5 +1,6 @@
 import string
 import random
+import sys
 
 def generate_random_password():
     length = int(input('Enter desired length of password: '))
@@ -18,4 +19,7 @@ def generate_random_password():
     random.shuffle(password)
     print(f"Generated Password: {''.join(password)}")
 
-generate_random_password()
+try:
+    generate_random_password()
+except:
+    sys.exit(1)
