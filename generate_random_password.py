@@ -25,7 +25,7 @@ def generate_random_password():
     create_file = input(
         'Do you want to create or append to a password file? (Y/N) ')
 
-    if re.match('^Y|y$', create_file):
+    if re.match('Y|y', create_file):
         create_password_file(password)
     else:
         print(f"\nGenerated Password: {password}")
