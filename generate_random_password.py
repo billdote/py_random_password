@@ -15,9 +15,7 @@ def generate_random_password():
     characters = list(string.ascii_letters + string.digits + schar)
     random.shuffle(characters)
 
-    password = []
-    for i in range(length):
-        password.append(random.choice(characters))
+    password = [random.choice(characters) for _ in range(length)]
 
     random.shuffle(password)
     password = ''.join(password)
