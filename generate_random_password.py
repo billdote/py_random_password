@@ -23,7 +23,7 @@ def generate_random_password():
     password = ''.join(password)
 
     create_file = input(
-        'Do you want to create or append to a password file? (Y/N) ')
+        'Do you want to create or append to a password file (Y/N)? ')
 
     if re.match('Y|y', create_file):
         create_password_file(password)
