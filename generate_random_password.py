@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 
-from csv import writer
-import string
+import os
 import random
 import re
-import os
+import string
 import sys
+from csv import writer
 
 
 def generate_random_password():
