@@ -2,9 +2,9 @@
 
 import os
 import random
-import re
 import string
-import sys
+from re import match
+from sys import exit
 from csv import writer
 
 
@@ -25,7 +25,7 @@ def generate_random_password():
     create_file = input(
         'Do you want to create or append to a password file (Y/N)? ')
 
-    if re.match('Y|y', create_file):
+    if match('Y|y', create_file):
         create_password_file(password)
     else:
         print(f"\nGenerated Password: {password}")
@@ -56,4 +56,4 @@ try:
     generate_random_password()
 except:
     print('Exiting...')
-    sys.exit(1)
+    exit(1)
